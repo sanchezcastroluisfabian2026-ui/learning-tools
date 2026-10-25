@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #e91e63 0%, #ff6090 100%);
+    color: white;
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: white;
+    color: #e91e63;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-volver:hover {
+    transform: translateY(-2px);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+/* INFORMACIÓN DE LA HERRAMIENTA */
+.seccion-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    border-left: 5px solid #e91e63;
+}
+
+.seccion-info h2 {
+    color: #e91e63;
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   SECCIONES Y MÓDULO DE LECCIONES
+========================================== */
+.seccion-lecciones {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.seccion-lecciones h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #111827;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+/* GRID RESPONSIVO (Soporta 2 o 3 columnas en PC y 1 en móvil) */
+.grid-lecciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* TARJETA TIPO PESTAÑA CON BORDES REDONDEADOS */
+.tarjeta-leccion {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-leccion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ESPACIO AJUSTABLE PARA LA IMAGEN */
+.imagen-leccion {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    background-color: #f3f4f6; /* Color de relleno mientras colocas tu imagen */
+}
+
+/* CONTENIDO INTERNO DE LA TARJETA */
+.contenido-leccion {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.numero-leccion {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #e91e63; /* Color temático */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.contenido-leccion h3 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contenido-leccion p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* BOTÓN DE ACCIÓN */
+.contenido-leccion button {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+}
+
+.contenido-leccion button:hover {
+    background-color: #e91e63;
+    color: #ffffff;
+    border-color: #e91e63;
+}
+
+/* AJUSTE PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 640px) {
+    .grid-lecciones {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .imagen-leccion {
+        height: 160px;
+    }
+}
+
+.grid-lecciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-leccion {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-leccion:hover {
+    transform: translateY(-4px);
+}
+
+.numero-leccion {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #e91e63;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+.tarjeta-leccion h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.tarjeta-leccion p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.tarjeta-leccion button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tarjeta-leccion button:hover {
+    background-color: #c2185b;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    color: #777;
+}

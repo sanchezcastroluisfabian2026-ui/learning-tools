@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Learning Tools</title>
+    <link rel="stylesheet" href="stylie.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f8fafc; padding: 1rem;">
+
+    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px;">
+        <h2 style="text-align: center; margin-bottom: 1.5rem; color: #10b981;">Crear Cuenta</h2>
+        
+        <form id="form-registro" style="display: flex; flex-direction: column; gap: 1rem;">
+            <input type="email" id="email-reg" placeholder="Correo electrónico" required style="padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+            <input type="password" id="pass-reg" placeholder="Contraseña (mínimo 6 caracteres)" required style="padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+            <button type="submit" style="background-color: #10b981; color: white; border: none; padding: 0.8rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Registrarse</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+            ¿Ya tienes cuenta? <a href="login.html" style="color: #2563eb; font-weight: bold;">Inicia sesión aquí</a>
+        </p>
+        <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;">
+            <a href="index.html" style="color: #64748b; text-decoration: none;">← Volver al inicio</a>
+        </p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCZdh8_P9T2I83KLlIDARgj3NcFLZsS-qY",
+            authDomain: "learning-tools-auth.firebaseapp.com",
+            projectId: "learning-tools-auth",
+            storageBucket: "learning-tools-auth.firebasestorage.app",
+            messagingSenderId: "583726502803",
+            appId: "1:583726502803:web:752c083f1744864220ce66",
+            measurementId: "G-V22LT0J5NP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("form-registro").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email-reg").value;
+            const password = document.getElementById("pass-reg").value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                    alert("¡Registro exitoso! Bienvenido a Learning Tools.");
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    alert("Error en el registro: " + error.message);
+                });
+        });
+    </script>
+</body>
+</html>

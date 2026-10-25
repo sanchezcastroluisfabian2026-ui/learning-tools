@@ -181,33 +181,47 @@ button:hover {
 
 /* CONTACTO */
 #contacto {
-    padding: 2rem 0;
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
     margin-top: 1rem;
 }
 
 #contacto h2 {
-    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-#contacto form {
+form {
+    max-width: 600PX;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#contacto input,
-#contacto textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+input, textarea {
+    padding: .8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 0.9rem;
 }
 
-#contacto textarea {
+textarea {
+    height: 150px;
     min-height: 40px;
     resize: vertical;
 }
-
+form button{
+    background-color: #fd5555;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #f42a2a;
+}
 /* PIE DE PÁGINA */
 footer {
     padding: 0.5rem 0;
