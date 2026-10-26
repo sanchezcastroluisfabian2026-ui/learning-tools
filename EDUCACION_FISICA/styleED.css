@@ -1,0 +1,213 @@
+/* ==========================================================
+   ESTILOS - EDUCACIÓN FÍSICA
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff7ed;
+    color: #7c2d12;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+.header-materia {
+    background-color: #ffffff;
+    border-bottom: 1px solid #fed7aa;
+    padding: 1rem 2rem;
+}
+
+.nav-materia {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-volver {
+    text-decoration: none;
+    color: #c2410c;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+.logo-text {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #9a3412;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-materia {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* BANNER DE LA MATERIA (Temático: Naranja Deportivo) */
+.banner-materia {
+    background: linear-gradient(135deg, #c2410c 0%, #f97316 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(194, 65, 12, 0.15);
+    margin-bottom: 2.5rem;
+}
+
+.badge-materia {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner-materia h1 {
+    font-size: 2.2rem;
+    margin: 0.8rem 0 0.3rem 0;
+}
+
+.profesor {
+    font-size: 1rem;
+    color: #ffedd5;
+    margin-bottom: 0.8rem;
+}
+
+.descripcion-materia {
+    font-size: 0.95rem;
+    max-width: 800px;
+    color: #ffedd5;
+}
+
+/* SECCIÓN DE UNIDADES */
+.seccion-unidades h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #431407;
+    border-left: 4px solid #c2410c;
+    padding-left: 0.6rem;
+}
+
+.grid-unidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* TARJETAS DE UNIDADES */
+.card-unidad {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #fed7aa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header-unidad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #fff7ed;
+}
+
+.unidad-numero {
+    font-weight: bold;
+    color: #c2410c;
+    font-size: 0.9rem;
+}
+
+.estado-actividad {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.estado-actividad.disponible {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.estado-actividad.proximo {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.card-body-unidad {
+    padding: 1.2rem 1rem;
+}
+
+.card-body-unidad h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #7c2d12;
+}
+
+.card-body-unidad p {
+    font-size: 0.88rem;
+    color: #9a3412;
+    margin-bottom: 1rem;
+}
+
+.recursos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    color: #7c2d12;
+    background-color: #fff7ed;
+    padding: 0.6rem;
+    border-radius: 6px;
+}
+
+.card-footer-unidad {
+    padding: 1rem;
+    border-top: 1px solid #fff7ed;
+    text-align: right;
+}
+
+.btn-materia-accion {
+    display: inline-block;
+    background-color: #c2410c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-materia-accion:hover {
+    background-color: #9a3412;
+}
+
+.btn-materia-accion.deshabilitado {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #9a3412;
+    font-size: 0.85rem;
+    border-top: 1px solid #fed7aa;
+    margin-top: 3rem;
+}

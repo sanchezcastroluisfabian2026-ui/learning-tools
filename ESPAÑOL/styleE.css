@@ -1,0 +1,213 @@
+/* ==========================================================
+   ESTILOS - LECTURA CRÍTICA
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff1f2;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+.header-materia {
+    background-color: #ffffff;
+    border-bottom: 1px solid #fecdd3;
+    padding: 1rem 2rem;
+}
+
+.nav-materia {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-volver {
+    text-decoration: none;
+    color: #9f1239;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+.logo-text {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #881337;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-materia {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* BANNER DE LA MATERIA (Temático: Vino Tinto) */
+.banner-materia {
+    background: linear-gradient(135deg, #881337 0%, #e11d48 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(136, 19, 55, 0.15);
+    margin-bottom: 2.5rem;
+}
+
+.badge-materia {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner-materia h1 {
+    font-size: 2.2rem;
+    margin: 0.8rem 0 0.3rem 0;
+}
+
+.profesor {
+    font-size: 1rem;
+    color: #ffe4e6;
+    margin-bottom: 0.8rem;
+}
+
+.descripcion-materia {
+    font-size: 0.95rem;
+    max-width: 800px;
+    color: #ffe4e6;
+}
+
+/* SECCIÓN DE UNIDADES */
+.seccion-unidades h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #4c0519;
+    border-left: 4px solid #9f1239;
+    padding-left: 0.6rem;
+}
+
+.grid-unidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* TARJETAS DE UNIDADES */
+.card-unidad {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #fecdd3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header-unidad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #fff1f2;
+}
+
+.unidad-numero {
+    font-weight: bold;
+    color: #9f1239;
+    font-size: 0.9rem;
+}
+
+.estado-actividad {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.estado-actividad.disponible {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.estado-actividad.proximo {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.card-body-unidad {
+    padding: 1.2rem 1rem;
+}
+
+.card-body-unidad h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.card-body-unidad p {
+    font-size: 0.88rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.recursos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    color: #374151;
+    background-color: #fff1f2;
+    padding: 0.6rem;
+    border-radius: 6px;
+}
+
+.card-footer-unidad {
+    padding: 1rem;
+    border-top: 1px solid #fff1f2;
+    text-align: right;
+}
+
+.btn-materia-accion {
+    display: inline-block;
+    background-color: #9f1239;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-materia-accion:hover {
+    background-color: #881337;
+}
+
+.btn-materia-accion.deshabilitado {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #881337;
+    font-size: 0.85rem;
+    border-top: 1px solid #fecdd3;
+    margin-top: 3rem;
+}

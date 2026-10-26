@@ -1,3 +1,7 @@
+/* ==========================================================
+   ESTILOS - CIENCIAS SOCIALES
+   ========================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +10,15 @@
 }
 
 body {
-    background-color: #f1f5f9;
-    color: #1e293b;
+    background-color: #fafaf9;
+    color: #1c1917;
     line-height: 1.6;
 }
 
 /* ENCABEZADO */
 .header-materia {
     background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e7e5e4;
     padding: 1rem 2rem;
 }
 
@@ -28,7 +32,7 @@ body {
 
 .btn-volver {
     text-decoration: none;
-    color: #2563eb;
+    color: #b45309;
     font-weight: bold;
     font-size: 0.9rem;
 }
@@ -40,7 +44,7 @@ body {
 .logo-text {
     font-size: 0.95rem;
     font-weight: bold;
-    color: #64748b;
+    color: #78716c;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -50,13 +54,13 @@ body {
     padding: 0 1rem;
 }
 
-/* BANNER DE LA MATERIA */
+/* BANNER DE LA MATERIA (Temático: Tonos Tierra / Oro) */
 .banner-materia {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #78350f 0%, #d97706 100%);
     color: white;
     padding: 2.5rem 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(120, 53, 15, 0.15);
     margin-bottom: 2.5rem;
 }
 
@@ -76,23 +80,22 @@ body {
 
 .profesor {
     font-size: 1rem;
-    color: #e0f2fe;
+    color: #fef3c7;
     margin-bottom: 0.8rem;
 }
 
 .descripcion-materia {
     font-size: 0.95rem;
     max-width: 800px;
-    color: #f1f5f9;
+    color: #fef3c7;
 }
 
-/* GRID DE UNIDADES Y TRABAJOS */
-.seccion-unidades h2,
-.seccion-recursos h2 {
+/* SECCIÓN DE UNIDADES */
+.seccion-unidades h2 {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: #0f172a;
-    border-left: 4px solid #2563eb;
+    color: #292524;
+    border-left: 4px solid #b45309;
     padding-left: 0.6rem;
 }
 
@@ -103,21 +106,15 @@ body {
     margin-bottom: 3rem;
 }
 
-/* TARJETAS DE CADA UNIDAD */
+/* TARJETAS DE UNIDADES */
 .card-unidad {
     background: white;
     border-radius: 10px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #e7e5e4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-unidad:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .card-header-unidad {
@@ -125,12 +122,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f5f5f4;
 }
 
 .unidad-numero {
     font-weight: bold;
-    color: #2563eb;
+    color: #b45309;
     font-size: 0.9rem;
 }
 
@@ -158,12 +155,12 @@ body {
 .card-body-unidad h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #292524;
 }
 
 .card-body-unidad p {
     font-size: 0.88rem;
-    color: #64748b;
+    color: #78716c;
     margin-bottom: 1rem;
 }
 
@@ -172,21 +169,21 @@ body {
     flex-direction: column;
     gap: 0.3rem;
     font-size: 0.82rem;
-    color: #334155;
-    background-color: #f8fafc;
+    color: #44403c;
+    background-color: #f5f5f4;
     padding: 0.6rem;
     border-radius: 6px;
 }
 
 .card-footer-unidad {
     padding: 1rem;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid #f5f5f4;
     text-align: right;
 }
 
 .btn-materia-accion {
     display: inline-block;
-    background-color: #2563eb;
+    background-color: #b45309;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -196,47 +193,21 @@ body {
 }
 
 .btn-materia-accion:hover {
-    background-color: #1d4ed8;
+    background-color: #92400e;
 }
 
 .btn-materia-accion.deshabilitado {
-    background-color: #cbd5e1;
-    color: #64748b;
+    background-color: #d6d3d1;
+    color: #78716c;
     pointer-events: none;
 }
 
-/* RECURSOS */
-.box-recursos {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-}
-
-.box-recursos ul {
-    list-style: none;
-}
-
-.box-recursos li {
-    margin-bottom: 0.8rem;
-    font-size: 0.95rem;
-}
-
-.box-recursos a {
-    color: #2563eb;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.box-recursos a:hover {
-    text-decoration: underline;
-}
-
+/* PIE DE PÁGINA */
 footer {
     text-align: center;
     padding: 2rem 0;
-    color: #64748b;
+    color: #78716c;
     font-size: 0.85rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #e7e5e4;
     margin-top: 3rem;
 }
