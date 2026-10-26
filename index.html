@@ -20,10 +20,10 @@
                 <li><a href="#Herramientas">Herramientas</a></li>
                 <li><a href="#material-estudio">Material de estudio</a></li>
                 
-                <!-- Botón de Inicio de sesión visible cuando NO hay sesión -->
-                <li id="nav-login-link"><a href="#auth-section">Iniciar Sesión</a></li>
+                <!-- Botón de Iniciar Sesión (visible solo cuando NO hay sesión) -->
+                <li id="nav-login-link"><a href="login.html">Iniciar Sesión</a></li>
 
-                <!-- Contenedor del Perfil de Usuario (Se muestra cuando SÍ hay sesión) -->
+                <!-- Perfil de Usuario con Avatar y Menú Desplegable (visible solo cuando SÍ hay sesión) -->
                 <li id="nav-user-profile" class="profile-container" style="display: none;">
                     <button id="profile-btn" class="profile-btn">
                         <img id="user-avatar" class="profile-avatar" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto de perfil">
@@ -36,8 +36,8 @@
                         </div>
                         <ul class="dropdown-menu">
                             <li><a href="perfil.html">👤 Ver mi perfil</a></li>
-                            <li><a href="#Herramientas">⭐ Mis Herramientas</a></li>
-                            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 0.25rem 0;">
+                            <li><a href="#Herramientas">⭐ Herramientas</a></li>
+                            <hr class="dropdown-divider">
                             <li><button id="btn-cerrar-sesion-header" class="btn-logout">🚪 Cerrar Sesión</button></li>
                         </ul>
                     </div>
@@ -51,18 +51,9 @@
         <!-- PORTADA -->
         <section id="hero">
             <h1>Encuentra tus materias</h1>
-
-            <p>
-                Encuentra el material de estudio
-                de tus materias.
-            </p>
-
-            <a href="#Materias" class="cta-button">
-                Ver materias
-            </a>
-            <a href="#Herramientas" class="cta-button">
-                Ver Herramientas
-            </a>
+            <p>Encuentra el material de estudio de tus materias.</p>
+            <a href="#Materias" class="cta-button">Ver materias</a>
+            <a href="#Herramientas" class="cta-button">Ver Herramientas</a>
         </section>
 
         <!-- MATERIAS -->
@@ -77,10 +68,8 @@
                     <div class="contenido">
                         <h3>Ciencias Sociales</h3>
                         <p class="Maestro">Santiago Buitrago</p>
-                        <p class="Descripcion">
-                            Materia que estudia al ser humano, su comportamiento, su historia y su organización en sociedad.
-                        </p>
-                        <a href="SOCIALES/indezS.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Materia que estudia al ser humano, su comportamiento, su historia y su organización en sociedad.</p>
+                        <a href="sociales/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -90,10 +79,8 @@
                     <div class="contenido">
                         <h3>Lectura crítica</h3>
                         <p class="Maestro">Ferney Castillo</p>
-                        <p class="Descripcion">
-                            Aprende a interpretar textos, analizar información y expresar tus ideas de manera clara y reflexiva.
-                        </p>
-                        <a href="lectura-critica/indexE.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Aprende a interpretar textos, analizar información y expresar tus ideas de manera clara y reflexiva.</p>
+                        <a href="lectura-critica/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -103,10 +90,8 @@
                     <div class="contenido">
                         <h3>Matemáticas</h3>
                         <p class="Maestro">Ana María</p>
-                        <p class="Descripcion">
-                            Ciencia que estudia los números, las formas, las estructuras y sus relaciones para resolver problemas.
-                        </p>
-                        <a href="matematicas/indexM.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Ciencia que estudia los números, las formas, las estructuras y sus relaciones para resolver problemas.</p>
+                        <a href="matematicas/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -116,10 +101,8 @@
                     <div class="contenido">
                         <h3>Biologia</h3>
                         <p class="Maestro">jhonatan Duitama</p>
-                        <p class="Descripcion">
-                            Ciencia natural que estudia la vida, los seres vivos, su origen, su evolución y sus interacciones con el entorno.
-                        </p>
-                        <a href="biologia/indexB.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Ciencia natural que estudia la vida, los seres vivos, su origen, su evolución y sus interacciones con el entorno.</p>
+                        <a href="biologia/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -129,10 +112,8 @@
                     <div class="contenido">
                         <h3>Quimica</h3>
                         <p class="Maestro">Derly Katherin</p>
-                        <p class="Descripcion">
-                            Ciencia natural que estudia la composición, estructura, propiedades y las transformaciones de la materia y su relación con la energía.
-                        </p>
-                        <a href="quimica/indexQ.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Ciencia natural que estudia la composición, estructura, propiedades y las transformaciones de la materia y su relación con la energía.</p>
+                        <a href="quimica/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -142,10 +123,8 @@
                     <div class="contenido">
                         <h3>Fisica</h3>
                         <p class="Maestro">Alegandro Lozano</p>
-                        <p class="Descripcion">
-                            Ciencia natural que estudia la materia, la energía, el tiempo, el espacio y las interacciones fundamentales que rigen el universo.
-                        </p>
-                        <a href="fisica/indexF.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Ciencia natural que estudia la materia, la energía, el tiempo, el espacio y las interacciones fundamentales que rigen el universo.</p>
+                        <a href="fisica/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -155,10 +134,8 @@
                     <div class="contenido">
                         <h3>Vida Cristiana</h3>
                         <p class="Maestro">Rubén Salazar</p>
-                        <p class="Descripcion">
-                            Curso de formación bíblica y espiritual diseñado para guiar a los creyentes en el crecimiento, la práctica y el entendimiento de su fe en el día a día.
-                        </p>
-                        <a href="vida-cristiana/indexVC.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Curso de formación bíblica y espiritual diseñado para guiar a los creyentes en el crecimiento, la práctica y el entendimiento de su fe.</p>
+                        <a href="vida-cristiana/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -168,10 +145,8 @@
                     <div class="contenido">
                         <h3>Ingles</h3>
                         <p class="Maestro">Carolina corzo</p>
-                        <p class="Descripcion">
-                            El objetivo principal es enseñar el idioma inglés como lengua extranjera o segunda lengua.
-                        </p>
-                        <a href="ingles/indexI.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">El objetivo principal es enseñar el idioma inglés como lengua extranjera o segunda lengua.</p>
+                        <a href="ingles/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -181,10 +156,8 @@
                     <div class="contenido">
                         <h3>Educación Fisica</h3>
                         <p class="Maestro">Stiven Peña</p>
-                        <p class="Descripcion">
-                            Materia basada en la enseñanza del movimiento corporal, el juego y el deporte para el desarrollo integral de la persona.
-                        </p>
-                        <a href="educacion-fisica/indexED.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Materia basada en la enseñanza del movimiento corporal, el juego y el deporte para el desarrollo integral.</p>
+                        <a href="educacion-fisica/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -194,26 +167,95 @@
                     <div class="contenido">
                         <h3>Artes</h3>
                         <p class="Maestro">Danna</p>
-                        <p class="Descripcion">
-                            Materia orientada al desarrollo de la creatividad, expresión visual, apreciación estética y técnicas artísticas.
-                        </p>
-                        <a href="artes/indexA.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <p class="Descripcion">Materia orientada al desarrollo de la creatividad, expresión visual, apreciación estética y técnicas artísticas.</p>
+                        <a href="artes/index.html" class="boton btn-requiere-auth">Ver trabajos</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    
+        <!-- HERRAMIENTAS -->
+        <section id="Herramientas">
+            <h2>Herramientas de aprendizaje</h2>
+
+            <div class="Herramientas">
+
+                <!-- Padlet -->
+                <article class="tools">
+                    <img src="img/padlet.png" alt="Herramienta Padlet">
+                    <div class="contenido">
+                        <h3>Padlet</h3>
+                        <p class="Descripcion">Descripción de la herramienta educativa.</p>
+                        <a href="padlet/index1.html" class="boton btn-requiere-auth">Ver herramienta</a>
+                    </div>
+                </article>
+
+                <!-- Todoist -->
+                <article class="tools">
+                    <img src="img/Todoist.png" alt="Herramienta Todoist">
+                    <div class="contenido">
+                        <h3>Todoist</h3>
+                        <p class="Descripcion">Descripción de la herramienta educativa.</p>
+                        <a href="todoist/index4.html" class="boton btn-requiere-auth">Ver herramienta</a>
+                    </div>
+                </article>
+
+                <!-- Flippity -->
+                <article class="tools">
+                    <img src="img/flip.jpg" alt="Herramienta Flippity">
+                    <div class="contenido">
+                        <h3>Flippity</h3>
+                        <p class="Descripcion">Descripción de la herramienta educativa.</p>
+                        <a href="flippity/index2.html" class="boton btn-requiere-auth">Ver herramienta</a>
                     </div>
                 </article>
 
             </div>
         </section>
 
+        <!-- MATERIAL DE ESTUDIO -->
+        <section id="material-estudio">
+            <h2>Material de estudio</h2>
+            <p>Encuentra guías, talleres, documentos y recursos educativos para reforzar lo aprendido en clase.</p>
+        </section>
+
+        <!-- SECCIÓN DE AUTENTICACIÓN -->
+        <section id="auth-section" class="auth-container">
+            
+            <!-- Vista cuando NO ha iniciado sesión -->
+            <div id="logged-out-view">
+                <h2 class="auth-title">Acceso a Learning Tools</h2>
+                <p class="auth-subtitle">Inicia sesión o regístrate para acceder a todas las herramientas y lecciones de la plataforma.</p>
+                
+                <div class="auth-buttons-group">
+                    <a href="login.html" class="boton btn-login-main">Iniciar Sesión</a>
+                    <a href="registro.html" class="boton btn-register-main">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Vista cuando SÍ ha iniciado sesión -->
+            <div id="logged-in-view" style="display: none;">
+                <h2 class="welcome-title">¡Bienvenido de nuevo!</h2>
+                <p id="user-email-display" class="user-email-text"></p>
+                <div class="auth-buttons-group">
+                    <a href="perfil.html" class="btn-profile-main">Ver Mi Perfil</a>
+                    <button id="btn-logout" class="btn-logout-main">Cerrar Sesión</button>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p style="text-align: center;">
+        <p class="footer-text">
             &copy; 2026 Learning Tools. Todos los derechos reservados.
         </p>
     </footer>
 
-    <!-- Script de Firebase para control de sesión y menú de perfil -->
+    <!-- Script de Firebase, Control de Sesión y Perfil -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
@@ -231,6 +273,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
+        // Mantener la sesión activa
         setPersistence(auth, browserLocalPersistence);
 
         const loggedOutView = document.getElementById("logged-out-view");
@@ -250,7 +293,7 @@
         let usuarioAutenticado = false;
         let sesionVerificada = false;
 
-        // Mostrar / Ocultar el menú desplegable al hacer clic en la foto
+        // Mostrar / Ocultar menú desplegable al hacer clic en el avatar
         if (profileBtn) {
             profileBtn.addEventListener("click", (e) => {
                 e.stopPropagation();
@@ -262,35 +305,37 @@
             });
         }
 
-        // Verificar el estado de la sesión
+        // Control de estado de autenticación en tiempo real
         onAuthStateChanged(auth, (user) => {
             sesionVerificada = true;
             if (user) {
                 usuarioAutenticado = true;
+                
+                // Actualizar sección inferior de auth
                 loggedOutView.style.display = "none";
                 loggedInView.style.display = "block";
                 userEmailDisplay.textContent = `Sesión iniciada como: ${user.email}`;
 
-                // Configurar elementos del perfil en el Header
+                // Actualizar barra de navegación superior (Header)
                 navLoginLink.style.display = "none";
                 navUserProfile.style.display = "block";
                 userEmailHeader.textContent = user.email;
                 userName.textContent = user.displayName || "Estudiante";
-                
-                // Si el usuario tiene foto de Google la muestra, sino la predeterminada
                 userAvatar.src = user.photoURL || "https://cdn-icons-png.flaticon.com/512/847/847969.png";
             } else {
                 usuarioAutenticado = false;
+                
+                // Actualizar sección inferior de auth
                 loggedOutView.style.display = "block";
                 loggedInView.style.display = "none";
 
-                // Mostrar botón normal de login
+                // Actualizar barra de navegación superior (Header)
                 navLoginLink.style.display = "block";
                 navUserProfile.style.display = "none";
             }
         });
 
-        // Interceptar clics protegiendo el contenido
+        // Interceptar clics en botones protegidos
         document.addEventListener("click", (e) => {
             const elemento = e.target.closest(".btn-requiere-auth");
             
@@ -313,7 +358,7 @@
             }
         });
 
-        // Función reutilizable para cerrar sesión
+        // Función global para cerrar sesión
         const cerrarSesion = () => {
             signOut(auth).then(() => {
                 alert("Has cerrado sesión correctamente.");
