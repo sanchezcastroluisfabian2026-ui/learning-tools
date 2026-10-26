@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - LEARNING TOOLS</title>
+    <link rel="stylesheet" href="stylie.css">
+    <style>
+        .perfil-card {
+            max-width: 700px;
+            margin: 3rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .perfil-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .perfil-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+            object-fit: cover;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .stat-box {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">LEARNING TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">← Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="perfil-card">
+            <div class="perfil-header">
+                <img id="p-avatar" class="perfil-img" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto de Perfil">
+                <div>
+                    <h2 id="p-name" style="color: #1e293b;">Cargando...</h2>
+                    <p id="p-email" style="color: #64748b; font-size: 0.95rem;"></p>
+                    <span style="display: inline-block; background-color: #dbeafe; color: #1e40af; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-top: 0.5rem;">Estudiante Activo</span>
+                </div>
+            </div>
+
+            <h3 style="color: #334155; margin-bottom: 1rem;">Resumen de Actividad</h3>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>10</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Materias Inscritas</p>
+                </div>
+                <div class="stat-box">
+                    <h3>3</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Herramientas disponibles</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Acceso a la plataforma</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="index.html#Herramientas" class="cta-button" style="text-decoration: none;">Ir a Herramientas</a>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCZdh8_P9T2I83KLlIDARgj3NcFLZsS-qY",
+            authDomain: "learning-tools-auth.firebaseapp.com",
+            projectId: "learning-tools-auth",
+            storageBucket: "learning-tools-auth.firebasestorage.app",
+            messagingSenderId: "583726502803",
+            appId: "1:583726502803:web:752c083f1744864220ce66",
+            measurementId: "G-V22LT0J5NP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById("p-name").textContent = user.displayName || "Estudiante";
+                document.getElementById("p-email").textContent = user.email;
+                document.getElementById("p-avatar").src = user.photoURL || "https://cdn-icons-png.flaticon.com/512/847/847969.png";
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+</body>
+</html>

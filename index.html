@@ -19,7 +19,29 @@
                 <li><a href="#Materias">Materias</a></li>
                 <li><a href="#Herramientas">Herramientas</a></li>
                 <li><a href="#material-estudio">Material de estudio</a></li>
-                <li><a href="#auth-section">Iniciar Sesión</a></li>
+                
+                <!-- Botón de Inicio de sesión visible cuando NO hay sesión -->
+                <li id="nav-login-link"><a href="#auth-section">Iniciar Sesión</a></li>
+
+                <!-- Contenedor del Perfil de Usuario (Se muestra cuando SÍ hay sesión) -->
+                <li id="nav-user-profile" class="profile-container" style="display: none;">
+                    <button id="profile-btn" class="profile-btn">
+                        <img id="user-avatar" class="profile-avatar" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto de perfil">
+                    </button>
+
+                    <div id="profile-dropdown" class="profile-dropdown">
+                        <div class="dropdown-header">
+                            <strong id="user-name">Usuario</strong>
+                            <span id="user-email-header">correo@ejemplo.com</span>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="perfil.html">👤 Ver mi perfil</a></li>
+                            <li><a href="#Herramientas">⭐ Mis Herramientas</a></li>
+                            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 0.25rem 0;">
+                            <li><button id="btn-cerrar-sesion-header" class="btn-logout">🚪 Cerrar Sesión</button></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -58,7 +80,7 @@
                         <p class="Descripcion">
                             Materia que estudia al ser humano, su comportamiento, su historia y su organización en sociedad.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="SOCIALES/indezS.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -71,7 +93,7 @@
                         <p class="Descripcion">
                             Aprende a interpretar textos, analizar información y expresar tus ideas de manera clara y reflexiva.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="lectura-critica/indexE.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -84,7 +106,7 @@
                         <p class="Descripcion">
                             Ciencia que estudia los números, las formas, las estructuras y sus relaciones para resolver problemas.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="matematicas/indexM.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -97,7 +119,7 @@
                         <p class="Descripcion">
                             Ciencia natural que estudia la vida, los seres vivos, su origen, su evolución y sus interacciones con el entorno.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="biologia/indexB.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -110,7 +132,7 @@
                         <p class="Descripcion">
                             Ciencia natural que estudia la composición, estructura, propiedades y las transformaciones de la materia y su relación con la energía.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="quimica/indexQ.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -123,7 +145,7 @@
                         <p class="Descripcion">
                             Ciencia natural que estudia la materia, la energía, el tiempo, el espacio y las interacciones fundamentales que rigen el universo.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="fisica/indexF.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -136,7 +158,7 @@
                         <p class="Descripcion">
                             Curso de formación bíblica y espiritual diseñado para guiar a los creyentes en el crecimiento, la práctica y el entendimiento de su fe en el día a día.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="vida-cristiana/indexVC.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -149,7 +171,7 @@
                         <p class="Descripcion">
                             El objetivo principal es enseñar el idioma inglés como lengua extranjera o segunda lengua.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="ingles/indexI.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -162,7 +184,7 @@
                         <p class="Descripcion">
                             Materia basada en la enseñanza del movimiento corporal, el juego y el deporte para el desarrollo integral de la persona.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="educacion-fisica/indexED.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
@@ -173,112 +195,29 @@
                         <h3>Artes</h3>
                         <p class="Maestro">Danna</p>
                         <p class="Descripcion">
-                            Ciencia que estudia los números, las formas, las estructuras y sus relaciones para resolver problemas.
+                            Materia orientada al desarrollo de la creatividad, expresión visual, apreciación estética y técnicas artísticas.
                         </p>
-                        <a href="#Materias" class="boton btn-requiere-auth">Ver trabajos</a>
+                        <a href="artes/indexA.html" class="boton btn-requiere-auth">Ver trabajos</a>
                     </div>
                 </article>
 
             </div>
-        </section>
-    
-        <!-- HERRAMIENTAS -->
-        <section id="Herramientas">
-            <h2>Herramientas de aprendizaje</h2>
-
-            <div class="Herramientas">
-
-                <!-- Padlet -->
-                <article class="tools">
-                    <img src="img/padlet.png" alt="Herramienta Padlet">
-                    <div class="contenido">
-                        <h3>Padlet</h3>
-                        <p class="Descripcion">
-                            Descripción de la herramienta educativa.
-                        </p>
-                        <a href="padlet/index1.html" class="boton btn-requiere-auth">
-                            Ver herramienta
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Todoist -->
-                <article class="tools">
-                    <img src="img/Todoist.png" alt="Herramienta Todoist">
-                    <div class="contenido">
-                        <h3>Todoist</h3>
-                        <p class="Descripcion">
-                            Descripción de la herramienta educativa.
-                        </p>
-                        <a href="todoist/index4.html" class="boton btn-requiere-auth">
-                            Ver herramienta
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Flippity -->
-                <article class="tools">
-                    <img src="img/flip.jpg" alt="Herramienta Flippity">
-                    <div class="contenido">
-                        <h3>Flippity</h3>
-                        <p class="Descripcion">
-                            Descripción de la herramienta educativa.
-                        </p>
-                        <a href="flippity/index2.html" class="boton btn-requiere-auth">
-                            Ver herramienta
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- MATERIAL DE ESTUDIO -->
-        <section id="material-estudio">
-            <h2>Material de estudio</h2>
-            <p>
-                Encuentra guías, talleres, documentos y recursos educativos para reforzar lo aprendido en clase.
-            </p>
-        </section>
-
-        <!-- SECCIÓN DE AUTENTICACIÓN -->
-        <section id="auth-section" class="auth-container" style="max-width: 600px; margin: 4rem auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-            
-            <!-- Vista cuando NO ha iniciado sesión -->
-            <div id="logged-out-view">
-                <h2 style="color: #1e40af; margin-bottom: 1rem;">Acceso a Learning Tools</h2>
-                <p style="color: #666; margin-bottom: 1.5rem;">Inicia sesión o regístrate para acceder a todas las herramientas y lecciones de la plataforma.</p>
-                
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="login.html" class="boton" style="background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">Iniciar Sesión</a>
-                    <a href="registro.html" class="boton" style="background-color: #10b981; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">Registrarse</a>
-                </div>
-            </div>
-
-            <!-- Vista cuando SÍ ha iniciado sesión -->
-            <div id="logged-in-view" style="display: none;">
-                <h2 style="color: #10b981; margin-bottom: 0.5rem;">¡Bienvenido de nuevo!</h2>
-                <p id="user-email-display" style="color: #4b5563; margin-bottom: 1.5rem; font-weight: 500;"></p>
-                <button id="btn-logout" style="background-color: #ef4444; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Cerrar Sesión</button>
-            </div>
-
         </section>
 
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>
+        <p style="text-align: center;">
             &copy; 2026 Learning Tools. Todos los derechos reservados.
         </p>
     </footer>
 
-    <!-- Script de Firebase para control de sesión y bloqueo -->
+    <!-- Script de Firebase para control de sesión y menú de perfil -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-        // Tus credenciales de Firebase (reemplaza con tus datos reales)
         const firebaseConfig = {
             apiKey: "AIzaSyCZdh8_P9T2I83KLlIDARgj3NcFLZsS-qY",
             authDomain: "learning-tools-auth.firebaseapp.com",
@@ -292,29 +231,62 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // Mantiene la sesión abierta incluso al cerrar el navegador
         setPersistence(auth, browserLocalPersistence);
 
         const loggedOutView = document.getElementById("logged-out-view");
         const loggedInView = document.getElementById("logged-in-view");
         const userEmailDisplay = document.getElementById("user-email-display");
         const btnLogout = document.getElementById("btn-logout");
+        const btnLogoutHeader = document.getElementById("btn-cerrar-sesion-header");
+
+        const navLoginLink = document.getElementById("nav-login-link");
+        const navUserProfile = document.getElementById("nav-user-profile");
+        const profileBtn = document.getElementById("profile-btn");
+        const profileDropdown = document.getElementById("profile-dropdown");
+        const userAvatar = document.getElementById("user-avatar");
+        const userName = document.getElementById("user-name");
+        const userEmailHeader = document.getElementById("user-email-header");
 
         let usuarioAutenticado = false;
-        let sesionVerificada = false; // Control para evitar bucles de carga
+        let sesionVerificada = false;
 
-        // Verificar el estado de la sesión de manera persistente
+        // Mostrar / Ocultar el menú desplegable al hacer clic en la foto
+        if (profileBtn) {
+            profileBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileDropdown.classList.toggle("active");
+            });
+
+            document.addEventListener("click", () => {
+                profileDropdown.classList.remove("active");
+            });
+        }
+
+        // Verificar el estado de la sesión
         onAuthStateChanged(auth, (user) => {
-            sesionVerificada = true; // Firebase ya respondió
+            sesionVerificada = true;
             if (user) {
                 usuarioAutenticado = true;
                 loggedOutView.style.display = "none";
                 loggedInView.style.display = "block";
                 userEmailDisplay.textContent = `Sesión iniciada como: ${user.email}`;
+
+                // Configurar elementos del perfil en el Header
+                navLoginLink.style.display = "none";
+                navUserProfile.style.display = "block";
+                userEmailHeader.textContent = user.email;
+                userName.textContent = user.displayName || "Estudiante";
+                
+                // Si el usuario tiene foto de Google la muestra, sino la predeterminada
+                userAvatar.src = user.photoURL || "https://cdn-icons-png.flaticon.com/512/847/847969.png";
             } else {
                 usuarioAutenticado = false;
                 loggedOutView.style.display = "block";
                 loggedInView.style.display = "none";
+
+                // Mostrar botón normal de login
+                navLoginLink.style.display = "block";
+                navUserProfile.style.display = "none";
             }
         });
 
@@ -323,14 +295,12 @@
             const elemento = e.target.closest(".btn-requiere-auth");
             
             if (elemento) {
-                // Si Firebase aún está cargando, evitamos el clic momentáneamente
                 if (!sesionVerificada) {
                     e.preventDefault();
                     alert("⏳ Verificando sesión, por favor espera un momento...");
                     return;
                 }
 
-                // Si ya verificó y NO ha iniciado sesión, se bloquea y redirige al login
                 if (!usuarioAutenticado) {
                     e.preventDefault();
                     alert("⚠️ Debes iniciar sesión o registrarte para acceder al contenido.");
@@ -343,15 +313,18 @@
             }
         });
 
-        // Cerrar sesión
-        btnLogout.addEventListener("click", () => {
+        // Función reutilizable para cerrar sesión
+        const cerrarSesion = () => {
             signOut(auth).then(() => {
                 alert("Has cerrado sesión correctamente.");
                 window.location.reload();
             }).catch((error) => {
                 alert("Error al cerrar sesión: " + error.message);
             });
-        });
+        };
+
+        if (btnLogout) btnLogout.addEventListener("click", cerrarSesion);
+        if (btnLogoutHeader) btnLogoutHeader.addEventListener("click", cerrarSesion);
     </script>
 
 </body>
